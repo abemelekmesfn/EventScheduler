@@ -18,8 +18,11 @@ from django.contrib import admin
 from django.urls import path
 from users.views import UserListView, UserDetailView
 from events.views import EventListCreateView, EventDetailView, ParticipantListCreateView, ReminderListCreateView
+from config.views import home
 
 urlpatterns = [
+    path("", home, name="home"),
+
     path('admin/', admin.site.urls),
 
     # Users
